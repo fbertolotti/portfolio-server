@@ -1,0 +1,18 @@
+services:
+    project.admin.project:
+        class: ProjectBundle\Admin\ProjectAdmin
+        arguments: [~, ProjectBundle\Entity\Project, ProjectBundle:ProjectAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Project }
+
+    project.admin.technology:
+        class: ProjectBundle\Admin\TechnologyAdmin
+        arguments: [~, ProjectBundle\Entity\Technology, ProjectBundle:TechnologyAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Technology }
+
+    project.admin.link:
+        class: ProjectBundle\Admin\LinkAdmin
+        arguments: [~, ProjectBundle\Entity\Link, ProjectBundle:LinkAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Link }
